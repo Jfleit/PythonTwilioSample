@@ -33,7 +33,7 @@ def sms():
     body = request.values.get('Body', None)
     resp = MessagingResponse()
 
-    if body == "Forget it!" and visits > 0:
+    if body == "Forget it!":
         forget_visit()
         resp.message("Your visit has been forgotten!")
     else:
